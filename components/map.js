@@ -1,13 +1,23 @@
 import { MapContainer, Marker, Popup, TileLayer, Polygon } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import styles from '../styles/Home.module.css'
+import styles from "../styles/Home.module.css";
 
-const Map = () => {
+import { useEffect } from "react";
+
+const Map = ({ positions }) => {
+  // const [positions, setpositions] = useState({})
+  // var aa = Object.values(positions.Object.values)
+  var s = Object.values(positions);
+  var a = s.map((x) => Object.values(x));
+  // useEffect(() => {
+  //   console.log("posi", a);
+  // });
+
   var corner1 = L.latLng(31.25511170068011, 75.45963260194564),
     corner2 = L.latLng(30.789425008485473, 76.11800097467153),
     bounds = L.latLngBounds(corner1, corner2);
 
-    var latlngs = [
+  var latlngs = [
     [30.977316735932675, 75.93512087113656],
     [30.941022736479066, 75.79613199244999],
     [30.83385271345394, 75.75328579676466],

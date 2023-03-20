@@ -8,6 +8,21 @@
     background: #d1d1d1;
 }
 
+.toprow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add{
+    outline: none;
+    border-radius: 10px;
+    aspect-ratio: 1;
+    width: 3em;
+    font-size: 14px;
+    background: grey;
+    
+}
+
 .register > input{
     background: white;
     padding: 0.5em;
