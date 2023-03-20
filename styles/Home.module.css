@@ -1,0 +1,14 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 6rem; */
+  min-height: 100vh;
+  padding: 1em;
+  background: rgb(61, 58, 53);
+}
+
+.map{
+  border-radius: 10px;
+}

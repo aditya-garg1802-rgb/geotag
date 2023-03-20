@@ -1,0 +1,41 @@
+.register{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    background: #d1d1d1;
+}
+
+.register > input{
+    background: white;
+    padding: 0.5em;
+    font-size: 24px;
+    border-radius: 5px;
+    outline: none;
+    border: solid 1px black;
+    color: black;
+}
+
+.holder{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.holder > input{
+
+    background: white;
+    padding: 0.5em;
+    font-size: 24px;
+    border-radius: 5px;
+    outline: none;
+    border: solid 1px black;
+    color: black;
+}
+
+.register > button{
+    padding: 1em;
+    border-radius: 5px;
+    outline: none;
+}
