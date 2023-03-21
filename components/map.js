@@ -8,7 +8,11 @@ const Map = ({ positions }) => {
   // const [positions, setpositions] = useState({})
   // var aa = Object.values(positions.Object.values)
   var s = Object.values(positions);
-  var a = s.map((x) => Object.values(x));
+  var latlngs = s.map((x) => Object.values(x));
+  // var x = a.map((g)=>(g.split(',').map(Number)))
+
+
+
   // useEffect(() => {
   //   console.log("posi", a);
   // });
@@ -17,12 +21,12 @@ const Map = ({ positions }) => {
     corner2 = L.latLng(30.789425008485473, 76.11800097467153),
     bounds = L.latLngBounds(corner1, corner2);
 
-  var latlngs = [
-    [30.977316735932675, 75.93512087113656],
-    [30.941022736479066, 75.79613199244999],
-    [30.83385271345394, 75.75328579676466],
-    [30.8558345803778, 75.93773344404421],
-  ];
+  // var latlngs = [
+  //   [30.977316735932675, 75.93512087113656],
+  //   [30.941022736479066, 75.79613199244999],
+  //   [30.83385271345394, 75.75328579676466],
+  //   [30.8558345803778, 75.93773344404421],
+  // ];
 
   var panLoc = L.latLng(30.70612218020988, 76.76212015652146);
 

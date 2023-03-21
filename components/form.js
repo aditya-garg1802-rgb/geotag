@@ -10,10 +10,7 @@ import { useState, useEffect } from "react";
 
 function Register({ onRegister }) {
   const [input, setInput] = useState([
-    {name: ""},
-    {name: ""},
-    {name: ""},
-    {name: ""},
+    [],[],[],[]
   ]);
   const [formData, setFormData] = useState("");
 
@@ -25,14 +22,17 @@ function Register({ onRegister }) {
     const { name, value } = e.target;
     let data = [...input];
     // console.log(data[name])
-    data[index][name] = value;
+    let arr = value.split(',')
+    let nums = arr.map(Number)
+
+    data[index] = nums;
     setInput(data);
     // console.log(index);
     // console.log(index,event.target.name)
   }
 
   function addInput() {
-    let newInput = { name: "" };
+    let newInput = [];
     setInput([...input, newInput]);
   }
 
