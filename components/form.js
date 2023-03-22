@@ -1,10 +1,4 @@
-//register area
-// -> manual data fill -> name => id
-// -> JSON data
 
-//show areas
-// -> id
-// -> locality
 import styles from "../styles/Form.module.css";
 import { useState, useEffect } from "react";
 
@@ -14,9 +8,6 @@ function Register({ onRegister }) {
   ]);
   const [formData, setFormData] = useState("");
 
-  // useEffect(() => {
-  //   console.log(input);
-  // }, [input]);
 
   function handleChange(e, index) {
     const { name, value } = e.target;
@@ -27,8 +18,7 @@ function Register({ onRegister }) {
 
     data[index] = nums;
     setInput(data);
-    // console.log(index);
-    // console.log(index,event.target.name)
+
   }
 
   function addInput() {
@@ -38,13 +28,11 @@ function Register({ onRegister }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // console.log(input);
+
     onRegister(input);
   }
 
-  // useEffect(() => {
-  //   console.log(input);
-  // }, [input]);
+  
 
   return (
     <form onSubmit={handleSubmit} className={styles.register}>
@@ -60,7 +48,7 @@ function Register({ onRegister }) {
             <input
               key={index}
               name="name"
-              placeholder="lat,long"
+              placeholder="long,lat"
               value={data.name}
               onChange={(e) => handleChange(e, index)}
             />
@@ -69,8 +57,7 @@ function Register({ onRegister }) {
       </div>
       <hr />
 
-      {/* <input name="name" placeholder="Name" />
-      <input  name="email" placeholder="Email" /> */}
+
       <button onClick={handleSubmit}>Submit</button>
     </form>
   );
